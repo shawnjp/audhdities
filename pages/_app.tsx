@@ -1,8 +1,25 @@
-import './globals.css'; // Adjust the path if your directory structure is different
-import type { AppProps } from 'next/app';
+import { AppProps } from 'next/app';
+import { ClerkProvider, ClerkProviderProps, UserButton } from '@clerk/clerk-react';
+import './globals.css';
+import { useRouter } from 'next/router'; // Import useRouter
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+const publicPages = ['/signin', '/signup', '/index'];
+
+function MyApp({ Component, pageProps }: AppProps & ClerkProviderProps) {
+  const { pathname } = useRouter(); // Use useRouter to get the current pathname
+
+  return (
+    <ClerkProvider publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY} {...pageProps}>
+      {publicPages.includes(pathname) ? (
+        <Component {...pageProps} /> // Render only the component for public pages
+      ) : (
+       
+          <Component {...pageProps} /> 
+        
+      )}
+      <UserButton/>
+    </ClerkProvider>
+  );
 }
 
 export default MyApp;
