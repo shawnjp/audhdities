@@ -1,23 +1,27 @@
-import { AppProps } from 'next/app';
-import { ClerkProvider, ClerkProviderProps, UserButton } from '@clerk/clerk-react';
-import './globals.css';
-import { useRouter } from 'next/router'; // Import useRouter
+import './globals.css'; // Adjust the path if your directory structure is different
+import type { AppProps } from 'next/app';
+import { ClerkProvider, RedirectToSignIn, SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
+import { useRouter } from 'next/router';
 
-const publicPages = ['/signin', '/signup', '/index'];
+const publicPages = ['/sign-in', '/sign-up']; // Add paths that don't require user to be signed in
 
-function MyApp({ Component, pageProps }: AppProps & ClerkProviderProps) {
-  const { pathname } = useRouter(); // Use useRouter to get the current pathname
-
+function MyApp({ Component, pageProps }: AppProps) {
+   const { pathname } = useRouter();
   return (
-    <ClerkProvider publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY} {...pageProps}>
+    <ClerkProvider publishableKey={process.env.NEXT_PUBLIC_CLERK_FRONTEND_API}>
       {publicPages.includes(pathname) ? (
-        <Component {...pageProps} /> // Render only the component for public pages
+        <Component {...pageProps} />
       ) : (
-       
-          <Component {...pageProps} /> 
-        
+        <>
+          <SignedIn>
+            <Component {...pageProps} />
+            <UserButton />
+          </SignedIn>
+          <SignedOut>
+            <RedirectToSignIn />
+          </SignedOut>
+        </>
       )}
-      <UserButton/>
     </ClerkProvider>
   );
 }
