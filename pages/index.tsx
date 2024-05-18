@@ -37,13 +37,13 @@ export default function Home({
   return (
     <div className="container mx-auto px-4 flex flex-col items-center justify-center min-h-screen">
       <Head>
-        <title>Create Next App</title>
+        <title>Audhdities</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className="flex flex-col items-center justify-center flex-1 py-20">
         <h1 className="text-4xl font-bold text-center">
-          Welcome to <a href="https://nextjs.org" className="text-blue-600 hover:underline">Next.js with MongoDB!</a>
+          Welcome to <a href="https://nextjs.org" className="text-blue-600 hover:underline">Audities</a>
         </h1>
 
         {isConnected ? (
@@ -59,22 +59,22 @@ export default function Home({
         </p>
 
         <div className="grid">
-        <div className="card bg-white hover:bg-gray-50 transition duration-300 ease-in-out shadow-lg hover:shadow-xl rounded-lg overflow-hidden border border-gray-200">
+        <div className="card bg-white hover:bg-gray-50 transition duration-300 ease-in-out shadow-lg hover:shadow-x3 rounded-lg overflow-hidden border border-gray-200">
           <h3 className="text-lg font-semibold p-4 block text-center">Component 1 &rarr;</h3>
           <p className="px-4 pb-4 block text-center">Description 1</p>
         </div>
 
-        <div className="card bg-white hover:bg-gray-50 transition duration-300 ease-in-out shadow-lg hover:shadow-xl rounded-lg overflow-hidden border border-gray-200">
+        <div className="card bg-white hover:bg-gray-50 transition duration-300 ease-in-out shadow-lg hover:shadow-x3 rounded-lg overflow-hidden border border-gray-200">
           <h3 className="text-lg font-semibold p-4 block text-center">Component 2 &rarr;</h3>
           <p className="px-4 pb-4 block text-center">Description 2</p>
         </div>
 
-        <div className="card bg-white hover:bg-gray-50 transition duration-300 ease-in-out shadow-lg hover:shadow-xl rounded-lg overflow-hidden border border-gray-200">
+        <div className="card bg-white hover:bg-gray-50 transition duration-300 ease-in-out shadow-lg hover:shadow-x3 rounded-lg overflow-hidden border border-gray-200">
           <h3 className="text-lg font-semibold p-4 block text-center">Component 3 &rarr;</h3>
           <p className="px-4 pb-4 block text-center">Description 3</p>
         </div>
 
-        <div className="card bg-white hover:bg-gray-50 transition duration-300 ease-in-out shadow-lg hover:shadow-xl rounded-lg overflow-hidden border border-gray-200">
+        <div className="card bg-white hover:bg-gray-50 transition duration-300 ease-in-out shadow-lg hover:shadow-x3 rounded-lg overflow-hidden border border-gray-200">
           <h3 className="text-lg font-semibold p-4 block text-center">Component 4 &rarr;</h3>
           <p className="px-4 pb-4 block text-center">Description 4</p>
         </div>
