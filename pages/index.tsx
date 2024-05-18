@@ -59,25 +59,25 @@ export default function Home({
         </p>
 
         <div className="grid">
-          <a href="https://nextjs.org/docs" className="card bg-white hover:bg-gray-50 transition duration-300 ease-in-out shadow-lg hover:shadow-xl rounded-lg overflow-hidden border border-gray-200">
-            <h3 className="text-lg font-semibold p-4">Documentation &rarr;</h3>
-            <p className="px-4 pb-4">Find in-depth information about Next.js features and API.</p>
-          </a>
+        <div className="card bg-white hover:bg-gray-50 transition duration-300 ease-in-out shadow-lg hover:shadow-xl rounded-lg overflow-hidden border border-gray-200">
+          <h3 className="text-lg font-semibold p-4 block text-center">Component 1 &rarr;</h3>
+          <p className="px-4 pb-4 block text-center">Description 1</p>
+        </div>
 
-          <a href="https://nextjs.org/learn" className="card bg-white hover:bg-gray-50 transition duration-300 ease-in-out shadow-lg hover:shadow-xl rounded-lg overflow-hidden border border-gray-200">
-            <h3 className="text-lg font-semibold p-4">Learn &rarr;</h3>
-            <p className="px-4 pb-4">Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+        <div className="card bg-white hover:bg-gray-50 transition duration-300 ease-in-out shadow-lg hover:shadow-xl rounded-lg overflow-hidden border border-gray-200">
+          <h3 className="text-lg font-semibold p-4 block text-center">Component 2 &rarr;</h3>
+          <p className="px-4 pb-4 block text-center">Description 2</p>
+        </div>
 
-          <a href="https://github.com/vercel/next.js/tree/canary/examples" className="card bg-white hover:bg-gray-50 transition duration-300 ease-in-out shadow-lg hover:shadow-xl rounded-lg overflow-hidden border border-gray-200">
-            <h3 className="text-lg font-semibold p-4">Examples &rarr;</h3>
-            <p className="px-4 pb-4">Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+        <div className="card bg-white hover:bg-gray-50 transition duration-300 ease-in-out shadow-lg hover:shadow-xl rounded-lg overflow-hidden border border-gray-200">
+          <h3 className="text-lg font-semibold p-4 block text-center">Component 3 &rarr;</h3>
+          <p className="px-4 pb-4 block text-center">Description 3</p>
+        </div>
 
-          <a href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app" target="_blank" rel="noopener noreferrer" className="card bg-white hover:bg-gray-50 transition duration-300 ease-in-out shadow-lg hover:shadow-xl rounded-lg overflow-hidden border border-gray-200">
-            <h3 className="text-lg font-semibold p-4">Deploy &rarr;</h3>
-            <p className="px-4 pb-4">Instantly deploy your Next.js site to a public URL with Vercel.</p>
-          </a>
+        <div className="card bg-white hover:bg-gray-50 transition duration-300 ease-in-out shadow-lg hover:shadow-xl rounded-lg overflow-hidden border border-gray-200">
+          <h3 className="text-lg font-semibold p-4 block text-center">Component 4 &rarr;</h3>
+          <p className="px-4 pb-4 block text-center">Description 4</p>
+        </div>
         </div>
       </main>
 
