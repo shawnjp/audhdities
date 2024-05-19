@@ -20,6 +20,7 @@ body {
     Helvetica Neue,
     sans-serif;
     background-image: linear-gradient(to right, #410e8a, #e5e7eb);
+  font-size: large;
 
 }
 body::after {
@@ -338,19 +339,19 @@ code {
 }
 .menu-button2 {
   margin-top: 2rem; /* Adds space above the button */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds subtle shadow for depth */
+  box-shadow: 0 4px 6px hwb(139 4% 20% / 0.7); /* Adds subtle shadow for depth */
   transition: all 0.3s ease; /* Smooth transition for hover effects */
 }
 
 .menu-button2:hover {
-  background-color: #7c53a5; /* Darker purple on hover */
+  background-color: #5962d5; /* Darker purple on hover */
   transform: translateY(-2px); /* Lifts the button slightly */
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
 }
 
 .menu-button2:active {
   transform: translateY(1px); /* Pushes the button down on click */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Smaller shadow on click */
+  box-shadow: 0 2px 5px rgba(147, 62, 127, 0.15); /* Smaller shadow on click */
 }
 .logo2 {
   position: absolute;

@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import Layout from '../components/Layout';
 import { useState } from 'react';
 
-const publicPages = ['/sign-in', '/sign-up'];
+const publicPages = ['/sign-in', '/sign-up', '/information'];
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
