@@ -4,7 +4,6 @@ import { ClerkProvider, RedirectToSignIn, SignedIn, SignedOut } from '@clerk/nex
 import { useRouter } from 'next/router';
 import Layout from '../components/Layout';
 import { useState } from 'react';
-import { UserButton } from '@clerk/nextjs';
 
 const publicPages = ['/sign-in', '/sign-up'];
 
@@ -16,7 +15,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
 
     <ClerkProvider publishableKey={process.env.NEXT_PUBLIC_CLERK_FRONTEND_API}>
-      <UserButton />
+      
       <Layout isOpen={isSidebarOpen} toggleSidebar={toggleSidebar}>
         {publicPages.includes(pathname) ? (
           <Component {...pageProps} />

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
+import { UserButton } from '@clerk/nextjs';
 import MenuButton from '../components/MenuButton';
 type SidebarProps = {
   isOpen: boolean;
@@ -11,8 +12,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
     <div className={`sidebar ${isOpen ? 'open' : 'closed'}`}>
       <div className="sidebar-header">
         <MenuButton toggleSidebar={toggleSidebar} />
-        </div>
-
+          <UserButton />
+      </div>
       <ul className="sidebar-links">
         <li className="p-4 hover:bg-gray-100">
           <Link href="/">Home</Link>
