@@ -52,6 +52,7 @@ export default function Home({
       <Head>
         <title>Audhdities</title>
         <link rel="icon" href="/kp-logo.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
       </Head>
 
       <main className="flex flex-col items-center justify-center flex-1 py-20">
