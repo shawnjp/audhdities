@@ -20,7 +20,7 @@ const Sidebar = () => {
  
       <ul className="sidebar-links">
         <li className="p-4 hover:bg-gray-100">
-          <Link href="transform: translateX(0)/">
+          <Link href="/">
             Home
           </Link>
         </li>
@@ -30,15 +30,21 @@ const Sidebar = () => {
           </Link>
         </li>
         <li className="p-4 hover:bg-gray-100">
-          <Link href="/services">
-            Services
+          <Link href="/fundraiserinfo">
+            Fundraiser Info
           </Link>
         </li>
         <li className="p-4 hover:bg-gray-100">
-          <Link href="/contact">
-            Contact
+          <Link href="https://cash.app/$jessicalynne10?text=AudhditiesSupport">
+          Donate via Cash App
           </Link>
         </li>
+        <li className="p-4 hover:bg-gray-100">
+          <Link href="https://www.paypal.me/Tjdpoetry?text=AudhditiesSupport">
+          Donate via PayPal
+          </Link>
+        </li>
+        
       </ul>
     </div>
   );
