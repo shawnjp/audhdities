@@ -1,0 +1,37 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: transparent; /* Ensure background is transparent for overlay */
+  }
+  
+  .banner {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px; /* Adjustable height */
+    line-height: 50px; /* Align text vertically */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    color: white;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.75); /* Inset shadow for dimensional effect */
+  }
+  
+  .banner-text {
+    display: inline-block;
+    white-space: nowrap;
+    position: relative;
+    left: 100%;
+    animation: scroll-left 30s linear infinite;
+  }
+  
+  @keyframes scroll-left {
+    from {
+      left: 100%;
+    }
+    to {
+      left: -100%;
+    }
+  }

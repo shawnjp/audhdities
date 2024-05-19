@@ -337,21 +337,28 @@ code {
   display: block;
   text-align: center;
 }
+.donate-buttons-container {
+  display: flex;
+  justify-content: center; /* Center the buttons horizontally */
+  margin-bottom: 2rem; /* Space between buttons and the next content */
+  flex-direction: row;
+  margin: 42px 0;
+}
 .menu-button2 {
-  margin-top: 2rem; /* Adds space above the button */
-  box-shadow: 0 4px 6px hwb(139 4% 20% / 0.7); /* Adds subtle shadow for depth */
-  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  margin: 0 8px; /* Space between buttons */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Deeper shadow for 3D effect */
+  transition: all 0.3s ease; 
 }
 
 .menu-button2:hover {
   background-color: #5962d5; /* Darker purple on hover */
-  transform: translateY(-2px); /* Lifts the button slightly */
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
+  transform: translateY(-3px); /* Lifts the button slightly */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3); 
 }
 
 .menu-button2:active {
   transform: translateY(1px); /* Pushes the button down on click */
-  box-shadow: 0 2px 5px rgba(147, 62, 127, 0.15); /* Smaller shadow on click */
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
 }
 .logo2 {
   position: absolute;
