@@ -27,7 +27,7 @@ const AboutPage: React.FC = () => {
               </p>
             </div>
             <div className="text-center">
-              <a href="/fundraiserinfo" className="menu-buttun bg-purple-600 hover:bg-purple-800 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+              <a href="/fundraiserinfo" className="menu-button2 bg-purple-600 hover:bg-purple-800 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
                 Support My Fundraiser
               </a>
             </div>

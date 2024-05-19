@@ -237,6 +237,7 @@ code {
   .logo {
     width:auto;
     height: 1.5em;
+    background-color: transparent;
   }
 }
 
@@ -245,6 +246,7 @@ code {
   .logo {
     height: 3em;
     width: auto;
+    background-color: transparent;
   }
 }
 /* Menu Button Styles */
@@ -330,4 +332,20 @@ code {
   padding-bottom: pb-4;
   display: block;
   text-align: center;
+}
+.menu-button2 {
+  margin-top: 2rem; /* Adds space above the button */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds subtle shadow for depth */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.menu-button2:hover {
+  background-color: #7c53a5; /* Darker purple on hover */
+  transform: translateY(-2px); /* Lifts the button slightly */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
+}
+
+.menu-button2:active {
+  transform: translateY(1px); /* Pushes the button down on click */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Smaller shadow on click */
 }

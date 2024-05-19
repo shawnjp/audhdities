@@ -9,7 +9,7 @@ type MenuButtonProps = {
 const MenuButton = ({ toggleSidebar }: MenuButtonProps) => {
     console.log("Rendering MenuButton");
   return (
-    <button onClick={toggleSidebar} className="fixed top-4 left-4 z-50">
+    <button onClick={toggleSidebar} className="fixed top-4 left-4 z-50 bg-transparent">
       <Image src={kpLogo} className="logo" alt="Logo" width={50} height={50} />
     </button>
   );
