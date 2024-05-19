@@ -12,7 +12,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
     <div className={`sidebar ${isOpen ? 'open' : 'closed'}`}>
       <div className="sidebar-header">
         <MenuButton toggleSidebar={toggleSidebar} />
-          <UserButton />
+        <UserButton />
       </div>
       <ul className="sidebar-links">
         <li className="p-4 hover:bg-gray-100">
@@ -23,6 +23,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
         </li>
         <li className="p-4 hover:bg-gray-100">
           <Link href="/fundraiserinfo">Fundraiser Info</Link>
+        </li>
+        <li className="p-4 hover:bg-gray-100">
+          <Link href="/information">Basic Info</Link>
+        </li>        <li className="p-4 hover:bg-gray-100">
+          <Link href="/community">Community</Link>
         </li>
         <li className="p-4 hover:bg-gray-100">
           <Link href="https://cash.app/$jessicalynne10?text=AudhditiesSupport">Donate via Cash App</Link>
