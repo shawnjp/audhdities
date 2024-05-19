@@ -352,9 +352,11 @@ code {
 }
 .logo2 {
   position: absolute;
-  left: 0;
+  left: 150px;
   bottom: 20px;
-  width: 100px;
+  width: auto;
+  height: 50px;
+  top: 0;
   transition: left 2s linear;
   background-color: transparent;
 }
