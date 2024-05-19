@@ -12,7 +12,7 @@ const Sidebar = () => {
 
   return (
     <div className={`sidebar ${isOpen ? 'open' : 'closed'}`}>
-      <button onClick={toggleSidebar}>Toggle Sidebar</button>
+      <button onClick={toggleSidebar} className='menu-button '>menu</button>
       <div className="sidebar-header">
         <UserButton />
       </div>
