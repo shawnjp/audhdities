@@ -11,13 +11,11 @@ const Sidebar = () => {
 
 
   return (
-    <div className="sidebar w-64 h-full shadow-md bg-white absolute inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out">
-      <div className="sidebar-header p-14 flex justify-between items-center">
-        
-      <UserButton />
-   
+    <div className={`sidebar ${isOpen ? 'open' : 'closed'}`}>
+      <button onClick={toggleSidebar}>Toggle Sidebar</button>
+      <div className="sidebar-header">
+        <UserButton />
       </div>
- 
       <ul className="sidebar-links">
         <li className="p-4 hover:bg-gray-100">
           <Link href="/">
