@@ -52,14 +52,20 @@ export default function Home({
       <Head>
         <title>Audhdities</title>
         <link rel="icon" href="/kp-logo.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
       </Head>
 
       <main className="flex flex-col items-center justify-center flex-1 py-20">
-      <div className="mb-8">
-          <Link href="https://cash.app" target="_blank" rel="noopener noreferrer" className="menu-button2 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mr-4">Donate via Cash App</Link>
-          <Link href="https://paypal.com" target="_blank" rel="noopener noreferrer" className="menu-button2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Donate via PayPal</Link>
-        </div>
-        <div className="grid">
+      
+      <div className="donate-buttons-container">
+        <Link href="https://cash.app" target="_blank" rel="noopener noreferrer" className="menu-button2 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-110 hover:shadow-2xl">
+          Donate via Cash App
+        </Link>
+        <Link href="https://paypal.com" target="_blank" rel="noopener noreferrer" className="menu-button2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-110 hover:shadow-2xl">
+          Donate via PayPal
+        </Link>
+      </div>
+      <div className="grid">
         {["Urgent Rent Support", "Help Unite Our Family", "Save Our Vehicle", "General Family Support"].map((title, index) => (
             <Link key={index} href="/information" className="card bg-white hover:bg-gray-50 transition duration-300 ease-in-out shadow-lg hover:shadow-x3 rounded-lg overflow-hidden border border-gray-200">
                 <h3 className="text-lg font-semibold p-4 block text-center">{title} &rarr;</h3>
