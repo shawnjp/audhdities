@@ -266,6 +266,8 @@ code {
   justify-content: center; /* Center content horizontally */
   transition: all 0.3s ease; /* Smooth transition for hover effects */
   position: fixed;
+  left: 500px;
+  bottom: 20px;
 }
 
 .menu-button:hover, .user-button-large:hover {
@@ -352,11 +354,10 @@ code {
 }
 .logo2 {
   position: absolute;
-  left: 150px;
+  left: 10px;
   bottom: 20px;
   width: auto;
   height: 50px;
   top: 0;
-  transition: left 2s linear;
 }
 
