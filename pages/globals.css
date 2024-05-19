@@ -250,6 +250,7 @@ code {
 }
 /* Menu Button Styles */
 .menu-button, .user-button-large {
+  display: inline-block;
   background: linear-gradient(to right, #43116c, #e5e7eb); /* Match card gradient */
   border: 1px solid #e2e8f0; /* Match card border */
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.04); /* Match card shadow */
@@ -262,6 +263,7 @@ code {
   align-items: center; /* Center items vertically */
   justify-content: center; /* Center content horizontally */
   transition: all 0.3s ease; /* Smooth transition for hover effects */
+  position: fixed;
 }
 
 .menu-button:hover, .user-button-large:hover {

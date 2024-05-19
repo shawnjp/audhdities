@@ -2,6 +2,10 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { UserButton } from '@clerk/nextjs';
 
+type SidebarProps = {
+  isOpen: boolean;
+  toggleSidebar: () => void;
+};
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false); // State to manage sidebar visibility
 
@@ -12,10 +16,11 @@ const Sidebar = () => {
 
   return (
     <div className={`sidebar ${isOpen ? 'open' : 'closed'}`}>
-      <button onClick={toggleSidebar} className='menu-button '>menu</button>
-      <div className="sidebar-header">
-        <UserButton />
+       <div className="sidebar-header">
+          <UserButton />
+        <button onClick={toggleSidebar} className='user-button-large'>menu</button>
       </div>
+
       <ul className="sidebar-links">
         <li className="p-4 hover:bg-gray-100">
           <Link href="/">
