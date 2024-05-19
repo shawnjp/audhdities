@@ -12,7 +12,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
     <div className={`sidebar ${isOpen ? 'open' : 'closed'}`}>
       <div className="sidebar-header">
         <UserButton />
-        <button onClick={toggleSidebar} className="user-button-large">Toggle</button>
+        <button onClick={toggleSidebar} className="user-button-large">Menu</button>
       </div>
 
       <ul className="sidebar-links">
