@@ -7,6 +7,8 @@ import MenuButton from '../components/MenuButton';
 import { useState } from 'react';
 
 const publicPages = ['/sign-in', '/sign-up'];
+import Image from 'next/image';
+import kpLogo from '../public/kp-logo.png';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -14,7 +16,11 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   const { pathname } = useRouter();
   return (
+
     <ClerkProvider publishableKey={process.env.NEXT_PUBLIC_CLERK_FRONTEND_API}>
+    <div className="relative">
+        <Image src={kpLogo} alt="KP Logo"className="logo2 absolute left-0 top-0" />
+    </div>
       <MenuButton toggleSidebar={toggleSidebar} />
       <Layout isOpen={isSidebarOpen} toggleSidebar={toggleSidebar}>
         {publicPages.includes(pathname) ? (

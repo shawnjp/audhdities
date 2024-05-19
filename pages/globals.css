@@ -129,6 +129,7 @@ code {
   flex-wrap: wrap;
   max-width: 800px;
   margin-top: 3rem;
+  padding: 1rem;
 }
 
 .card {
@@ -349,3 +350,12 @@ code {
   transform: translateY(1px); /* Pushes the button down on click */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Smaller shadow on click */
 }
+.logo2 {
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+  width: 100px;
+  transition: left 2s linear;
+  background-color: transparent;
+}
+
