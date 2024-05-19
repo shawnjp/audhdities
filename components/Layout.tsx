@@ -1,27 +1,16 @@
-import React, { ReactNode, useState } from 'react';
+import React, { ReactNode } from 'react';
 import Sidebar from './Sidebar';
-import Image from 'next/image';
-import kpLogo from '../public/kp-logo.png';
 
 type LayoutProps = {
   children: ReactNode;
+  isOpen: boolean;
+  toggleSidebar: () => void;
 };
 
-const Layout = ({ children }: LayoutProps) => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
-  const toggleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen);
-  };
-
+const Layout: React.FC<LayoutProps> = ({ children, isOpen, toggleSidebar }) => {
   return (
     <div className="flex">
-      <Sidebar />
-      {!isSidebarOpen && (
-        <button onClick={toggleSidebar} className="fixed top-4 left-4 z-50">
-          <Image src={kpLogo} alt="Logo" width={50} height={50} />
-        </button>
-      )}
+      <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
       <div className="content flex-1 p-4">
         {children}
       </div>
