@@ -10,10 +10,12 @@ type SidebarProps = {
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
   return (
     <div className={`sidebar ${isOpen ? 'open' : 'closed'}`}>
-      <div className="sidebar-header">
-        <MenuButton toggleSidebar={toggleSidebar} />
-        <UserButton />
-      </div>
+      <div className="sidebar-header">      
+      <div className="button-container">
+          <UserButton />
+          <MenuButton toggleSidebar={toggleSidebar} />
+        </div>
+        </div>
       <ul className="sidebar-links">
         <li className="p-4 hover:bg-gray-100">
           <Link href="/">Home</Link>
