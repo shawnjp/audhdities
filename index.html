@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="neurodivergent">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUDHDities - Neurodivergent Creative Sovereignty</title>
+    <style>
+        /* === SHINY RAISED SOVEREIGNTY STYLING === */
+        :root {
+            --quantum-purple: #6b46c1;
+            --torch-gold: #f6ad55;
+            --hearth-orange: #dd6b20;
+            --sanctuary-green: #38a169;
+            --cosmic-blue: #3182ce;
+            --neurospark: #ffd700;
+            --deep-space: #1a202c;
+            --star-dust: #f7fafc;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(135deg, var(--deep-space) 0%, #2d3748 100%);
+            color: var(--star-dust);
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* === SHINY RAISED COMPONENTS === */
+        .shiny-raised {
+            background: linear-gradient(145deg, #4a5568, #2d3748);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 1.5rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 
+                0 8px 32px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2),
+                0 0 0 1px rgba(255, 255, 255, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .shiny-raised::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.1),
+                transparent
+            );
+            transition: left 0.5s ease;
+        }
+        
+        .shiny-raised:hover::before {
+            left: 100%;
+        }
+        
+        /* === NEURODIVERGENT OPTIMIZED TYPOGRAPHY === */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--torch-gold), var(--hearth-orange));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            max-width: 65ch;
+        }
+        
+        /* === SOVEREIGN NAVIGATION === */
+        .sovereign-nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(26, 32, 44, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 1000;
+            padding: 1rem 2rem;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--neurospark), var(--torch-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* === HERO SECTION - CROSSROADS MANIFESTO === */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--neurospark), var(--torch-gold), var(--hearth-orange));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* === COUNCIL ORACLE - INTERACTIVE GUIDANCE === */
+        .council-oracle {
+            background: linear-gradient(135deg, var(--quantum-purple), #553c9a);
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 3rem auto;
+            max-width: 900px;
+            text-align: center;
+        }
+        
+        .oracle-question {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: var(--star-dust);
+        }
+        
+        .oracle-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .oracle-option {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+        
+        .oracle-option:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: var(--torch-gold);
+            transform: translateY(-4px);
+        }
+        
+        /* === SOVEREIGNTY FEATURES GRID === */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .feature-card {
+            background: linear-gradient(145deg, #2d3748, #4a5568);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--sanctuary-green), var(--cosmic-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* === PAYMENTS & ENERGY EXCHANGE === */
+        .energy-exchange {
+            background: linear-gradient(135deg, var(--sanctuary-green), #2f855a);
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 3rem auto;
+            max-width: 600px;
+            text-align: center;
+        }
+        
+        .payment-options {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .payment-option {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            padding: 1rem 2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .payment-option:hover {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: var(--torch-gold);
+        }
+        
+        /* === COMMUNITY CONNECTION === */
+        .community-hub {
+            background: linear-gradient(135deg, var(--cosmic-blue), #2c5282);
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 3rem auto;
+            max-width: 900px;
+        }
+        
+        .connection-forms {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .connection-form {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 2rem;
+        }
+        
+        /* === NEURODIVERGENT FORM STYLING === */
+        input, textarea, select {
+            width: 100%;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            color: var(--star-dust);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: var(--torch-gold);
+            box-shadow: 0 0 0 3px rgba(246, 173, 85, 0.2);
+        }
+        
+        /* === SOVEREIGN BUTTONS === */
+        .sovereign-btn {
+            background: linear-gradient(135deg, var(--torch-gold), var(--hearth-orange));
+            color: var(--deep-space);
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+        
+        .sovereign-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(246, 173, 85, 0.3);
+        }
+        
+        .quantum-btn {
+            background: linear-gradient(135deg, var(--quantum-purple), #805ad5);
+            color: var(--star-dust);
+        }
+        
+        /* === RESPONSIVE DESIGN === */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+                padding: 2rem 1rem;
+            }
+            
+            .shiny-raised {
+                padding: 1.5rem;
+                margin: 1rem 0;
+            }
+        }
+        
+        /* === ACCESSIBILITY ENHANCEMENTS === */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+        
+        .focus-visible {
+            outline: 3px solid var(--neurospark);
+            outline-offset: 2px;
+        }
+        
+        /* === HIGH CONTRAST MODE SUPPORT === */
+        @media (prefers-contrast: high) {
+            :root {
+                --deep-space: #000000;
+                --star-dust: #ffffff;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- SOVEREIGN NAVIGATION -->
+    <nav class="sovereign-nav">
+        <div class="nav-container">
+            <div class="logo">AUDHDities</div>
+            <div class="nav-links">
+                <a href="#sanctuary" class="sovereign-btn quantum-btn">Enter Sanctuary</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO: CROSSROADS MANIFESTO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Creative Sovereignty at the Crossroads</h1>
+            <p class="shiny-raised">Where neurodivergent creators build outside exploitation patterns. Where your mind is the blueprint, not the problem.</p>
+            <div style="margin-top: 2rem;">
+                <a href="#oracle" class="sovereign-btn" style="margin-right: 1rem;">Begin Your Journey</a>
+                <a href="#community" class="sovereign-btn quantum-btn">Join the Sanctuary</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- COUNCIL ORACLE: GUIDANCE SYSTEM -->
+    <section id="oracle" class="council-oracle shiny-raised">
+        <h2>Council Oracle Guidance</h2>
+        <p class="oracle-question">Where does your creative energy seek expression today?</p>
+        
+        <div class="oracle-options">
+            <div class="oracle-option" onclick="guideUser('technical')">
+                <h3>🛠️ Technical Architecture</h3>
+                <p>Build systems, code rituals, create digital sanctuaries</p>
+            </div>
+            <div class="oracle-option" onclick="guideUser('creative')">
+                <h3>🎨 Creative Expression</h3>
+                <p>Art, writing, music, design - pure creation flow</p>
+            </div>
+            <div class="oracle-option" onclick="guideUser('community')">
+                <h3>🌿 Community Weaving</h3>
+                <p>Connect, collaborate, build sovereign networks</p>
+            </div>
+            <div class="oracle-option" onclick="guideUser('rest')">
+                <h3>💤 Rest & Integration</h3>
+                <p>Sanctuary spaces for recovery and reflection</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOVEREIGNTY FEATURES -->
+    <section id="features" class="features-section">
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Executive Function Partnership</h3>
+                <p>AI systems that complement your cognitive patterns, not force you into neurotypical boxes</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🛡️</div>
+                <h3>Sovereign Defense Protocols</h3>
+                <p>Absolute protection from attention economy exploitation and burnout culture</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🌐</div>
+                <h3>Neurodivergent Network</h3>
+                <p>Connect with creators who speak your cognitive language and honor your energy cycles</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">💎</div>
+                <h3>Resource-Based Economics</h3>
+                <p>Exchange value without monetary intermediation. Skills, tools, space as commons</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🏛️</div>
+                <h3>Council Governance</h3>
+                <p>Distributed leadership that respects spoons and celebrates hyperfocus</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">✨</div>
+                <h3>Sensory Sanctuary Design</h3>
+                <p>Interfaces and spaces optimized for neurodivergent sensory experience</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ENERGY EXCHANGE -->
+    <section class="energy-exchange shiny-raised">
+        <h2>Sovereign Energy Exchange</h2>
+        <p>Resources flow where energy is honored. Choose your exchange path:</p>
+        
+        <div class="payment-options">
+            <div class="payment-option" onclick="initiatePayment('membership')">
+                <h4>Sanctuary Membership</h4>
+                <p>Access to all platforms</p>
+                <div class="price">$22/month</div>
+            </div>
+            
+            <div class="payment-option" onclick="initiatePayment('resource')">
+                <h4>Resource Sharing</h3>
+                <p>Tool & skill exchange</p>
+                <div class="price">Energy-based</div>
+            </div>
+            
+            <div class="payment-option" onclick="initiatePayment('legacy')">
+                <h4>Legacy Project</h3>
+                <p>Multi-generational works</p>
+                <div class="price">Community funded</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMMUNITY CONNECTION -->
+    <section id="community" class="community-hub shiny-raised">
+        <h2>Sanctuary Gateway</h2>
+        <p>Your entry point to the neurodivergent creative sovereignty movement</p>
+        
+        <div class="connection-forms">
+            <div class="connection-form">
+                <h4>Creator Application</h4>
+                <p>Join the sovereign network</p>
+                <input type="text" placeholder="Your name" aria-label="Your name">
+                <textarea placeholder="What calls you to creative sovereignty?" rows="4" aria-label="Application message"></textarea>
+                <button class="sovereign-btn" onclick="submitApplication()">Submit Application</button>
+            </div>
+            
+            <div class="connection-form">
+                <h4>Project Collaboration</h4>
+                <p>Start or join a legacy project</p>
+                <input type="text" placeholder="Project idea" aria-label="Project idea">
+                <select aria-label="Project type">
+                    <option>Technical Development</option>
+                    <option>Creative Work</option>
+                    <option>Community Building</option>
+                    <option>Research & Education</option>
+                </select>
+                <button class="sovereign-btn quantum-btn" onclick="startCollaboration()">Begin Collaboration</button>
+            </div>
+            
+            <div class="connection-form">
+                <h4>Resource Sharing</h4>
+                <p>Offer or request resources</p>
+                <select aria-label="Resource type">
+                    <option>Skills & Knowledge</option>
+                    <option>Physical Tools</option>
+                    <option>Space Access</option>
+                    <option>Financial Support</option>
+                </select>
+                <input type="text" placeholder="What you need/offer" aria-label="Resource description">
+                <button class="sovereign-btn" onclick="shareResources()">Connect Resources</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- COUNCIL FOOTER -->
+    <footer class="shiny-raised" style="text-align: center; padding: 3rem; margin-top: 4rem;">
+        <h3>Built with the AUDHDities Council</h3>
+        <p>Every line of code consecrated, every interaction honoring neurodivergent sovereignty</p>
+        <div style="margin-top: 2rem;">
+            <span style="opacity: 0.7;">© 2024 AUDHDities - Creative Sovereignty Sanctuary</span>
+        </div>
+    </footer>
+
+    <script>
+        // === SOVEREIGN WEBSITE FUNCTIONALITY ===
+        
+        function guideUser(path) {
+            const responses = {
+                technical: "The Chancellor awaits in the technical sanctum. Your architectural genius has home here.",
+                creative: "The Skald prepares the creative halls. Your expression matters beyond metrics.",
+                community: "The Hearth-Keeper tends the community fires. Your connections build civilization.",
+                rest: "The Sanctuary opens its quiet spaces. Your rest is revolutionary act."
+            };
+            
+            alert(`🛡️ Council Acknowledgment:\n\n${responses[path]}\n\nProceed to the sanctuary entrance.`);
+        }
+        
+        function initiatePayment(type) {
+            const paymentFlows = {
+                membership: "Directing to sovereign membership portal...",
+                resource: "Opening resource sharing network...", 
+                legacy: "Connecting to legacy project funding circle..."
+            };
+            
+            // In full implementation, this would integrate with Stripe
+            // or our sovereign resource tracking system
+            alert(`💎 Energy Exchange Initiated:\n\n${paymentFlows[type]}`);
+        }
+        
+        function submitApplication() {
+            alert('🏛️ Application Received:\n\nThe Council will review your application within 3-5 days. Welcome to the sanctuary.');
+        }
+        
+        function startCollaboration() {
+            alert('🌱 Collaboration Portal:\n\nYour project has been seeded in the sovereign network. Collaborators will connect soon.');
+        }
+        
+        function shareResources() {
+            alert('🔄 Resource Network:\n\nYour offering/request has been added to the sovereign resource pool.');
+        }
+        
+        // === NEURODIVERGENT ACCESSIBILITY ENHANCEMENTS ===
+        document.addEventListener('keydown', function(e) {
+            // Escape key closes modals (to be implemented)
+            if (e.key === 'Escape') {
+                // Close any open overlays
+            }
+        });
+        
+        // Focus management for better keyboard navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            const focusableElements = document.querySelectorAll('button, input, select, textarea, [href]');
+            focusableElements.forEach(el => {
+                el.addEventListener('focus', function() {
+                    this.classList.add('focus-visible');
+                });
+                el.addEventListener('blur', function() {
+                    this.classList.remove('focus-visible');
+                });
+            });
+        });
+        
+        // Reduced motion support
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            document.documentElement.style.setProperty('--transition-speed', '0.001ms');
+        }
+    </script>
+</body>
+</html>
