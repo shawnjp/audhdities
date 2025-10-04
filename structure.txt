@@ -1,0 +1,18 @@
+audhdities.com/
+├── index.html                    # Main website
+├── CNAME                         # DNS record for audhdities.com
+├── assets/                       # Shared assets
+│   ├── css/
+│   │   ├── main.css
+│   │   └── pagan-ritual.css      # Sovereign Hearth styles
+│   └── js/
+│       ├── main.js
+│       └── sovereign/            # Sovereign Hearth scripts
+│           ├── quantum-continuity.js
+│           ├── energy-cards.js
+│           ├── intention-manager.js
+│           └── energy-manager.js
+├── sovereign-hearth/             # Subdomain application
+│   ├── index.html                # Main PWA interface
+│   └── manifest.json             # PWA manifest
+└── README.md
