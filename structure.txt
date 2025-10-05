@@ -1,18 +1,20 @@
 audhdities.com/
-├── index.html                    # Main website
-├── CNAME                         # DNS record for audhdities.com
-├── assets/                       # Shared assets
+├── index.html                          # Main website
+├── CNAME                               # Updated with subdomain
+├── sovereign-hearth/
+│   ├── index.html                      # Sovereign Hearth PWA
+│   └── manifest.json                   # PWA manifest
+├── assets/
 │   ├── css/
-│   │   ├── main.css
-│   │   └── pagan-ritual.css      # Sovereign Hearth styles
+│   │   ├── main.css                    # Extracted main site styles
+│   │   └── pagan-ritual.css            # Sovereign Hearth styles (enhanced)
 │   └── js/
-│       ├── main.js
-│       └── sovereign/            # Sovereign Hearth scripts
+│       ├── main.js                     # Extracted main site functionality
+│       ├── form-handler.js             # NEW: Form data capture system
+│       └── sovereign/
 │           ├── quantum-continuity.js
 │           ├── energy-cards.js
 │           ├── intention-manager.js
 │           └── energy-manager.js
-├── sovereign-hearth/             # Subdomain application
-│   ├── index.html                # Main PWA interface
-│   └── manifest.json             # PWA manifest
-└── README.md
+└── data/
+    └── submissions/                    # NEW: Form data storage
