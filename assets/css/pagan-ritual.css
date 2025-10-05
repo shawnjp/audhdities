@@ -1,5 +1,19 @@
 /* 🌌 Pagan Ritual Theme Styles */
 :root {
+    --quantum-purple: #6b46c1;
+    --torch-gold: #f6ad55;
+    --hearth-orange: #dd6b20;
+    --sanctuary-green: #38a169;
+    --cosmic-blue: #3182ce;
+    --neurospark: #ffd700;
+    --deep-space: #1a202c;
+    --star-dust: #f7fafc;
+    
+    /* Sovereign Hearth specific */
+    --quantum-glow: rgba(107, 70, 193, 0.3);
+    --torch-glow: rgba(246, 173, 85, 0.3);
+    --hearth-glow: rgba(221, 107, 32, 0.3);
+
     /* Elemental Color Scheme */
     --quantum: #9b59b6;
     --quantum-light: #e8daef;
@@ -370,6 +384,40 @@ body {
     padding: 20px;
 }
 
+.shiny-raised {
+    background: linear-gradient(145deg, #4a5568, #2d3748);
+    border-radius: 16px;
+    padding: 2rem;
+    margin: 1.5rem 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2),
+        0 0 0 1px rgba(255, 255, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.shiny-raised::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.1),
+        transparent
+    );
+    transition: left 0.5s ease;
+}
+
+.shiny-raised:hover::before {
+    left: 100%;
+}
+
 .task-details {
     width: 100%;
     min-height: 100px;
@@ -378,6 +426,140 @@ body {
     border-radius: var(--radius-sm);
     font-family: inherit;
     resize: vertical;
+}
+
+.energy-card {
+    background: linear-gradient(145deg, #2d3748, #4a5568);
+    border-radius: 16px;
+    padding: 0;
+    margin: 1rem 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.energy-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.05),
+        transparent
+    );
+    transition: left 0.7s ease;
+}
+
+.energy-card:hover::before {
+    left: 100%;
+}
+
+.energy-card.quantum {
+    border-left: 4px solid var(--quantum-purple);
+    box-shadow: 
+        0 8px 32px var(--quantum-glow),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.energy-card.fire {
+    border-left: 4px solid var(--hearth-orange);
+    box-shadow: 
+        0 8px 32px var(--hearth-glow),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.energy-card.water {
+    border-left: 4px solid var(--cosmic-blue);
+    box-shadow: 
+        0 8px 32px rgba(49, 130, 206, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.energy-card.earth {
+    border-left: 4px solid var(--sanctuary-green);
+    box-shadow: 
+        0 8px 32px rgba(56, 161, 105, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Enhanced progress bars */
+.progress-fill.quantum {
+    background: linear-gradient(90deg, var(--quantum-purple), #805ad5);
+    box-shadow: 0 0 20px var(--quantum-glow);
+}
+
+.progress-fill.fire {
+    background: linear-gradient(90deg, var(--hearth-orange), #ed8936);
+    box-shadow: 0 0 20px var(--hearth-glow);
+}
+
+/* Quantum glow effects */
+.quantum-glow {
+    box-shadow: 0 0 30px var(--quantum-glow);
+}
+
+.torch-glow {
+    box-shadow: 0 0 30px var(--torch-glow);
+}
+
+/* Council entity themes */
+.entity-theme.chancellor { border-color: var(--cosmic-blue); }
+.entity-theme.seer { border-color: var(--quantum-purple); }
+.entity-theme.skald { border-color: var(--torch-gold); }
+.entity-theme.hearth-keeper { border-color: var(--hearth-orange); }
+.entity-theme.archivist { border-color: var(--sanctuary-green); }
+
+/* Ritual animations */
+@keyframes ritualPulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+.ritual-active {
+    animation: ritualPulse 2s ease-in-out infinite;
+}
+
+/* Quantum continuity visualizer */
+.continuity-beam {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--neurospark), transparent);
+    animation: beamTravel 3s linear infinite;
+}
+
+@keyframes beamTravel {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Enhanced form elements matching main site */
+.sovereign-input {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: var(--star-dust);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.sovereign-input:focus {
+    outline: none;
+    border-color: var(--torch-gold);
+    box-shadow: 0 0 0 3px rgba(246, 173, 85, 0.2);
 }
 
 /* Export Section */
@@ -451,6 +633,48 @@ body {
 
 .mb-20 {
     margin-bottom: 20px;
+}
+
+.energy-card .card-essence {
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.energy-card .card-essence:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Focus management for ADHD-friendly interaction */
+.energy-card:focus-within {
+    box-shadow: 
+        0 0 0 3px var(--torch-glow),
+        0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* High contrast support */
+@media (prefers-contrast: high) {
+    .energy-card {
+        border-width: 2px;
+        box-shadow: none;
+    }
+    
+    .shiny-raised {
+        box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .shiny-raised::before,
+    .energy-card::before,
+    .continuity-beam {
+        display: none;
+    }
+    
+    .energy-card {
+        transition: none;
+    }
 }
 
 /* Responsive Design */
