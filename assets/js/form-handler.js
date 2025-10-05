@@ -118,7 +118,7 @@ class SovereignFormHandler {
         this.showNotification('🔄 Resource added to sovereign pool! Network connecting...', 'success');
         form.querySelector('input[type="text"]').value = '';
     }
-
+    
     handlePaymentInitiation(paymentType) {
         const submission = {
             type: 'payment_initiation',
@@ -189,6 +189,16 @@ class SovereignFormHandler {
         console.log('💾 Submissions export ready:', url);
     }
 
+    // Add to form-handler.js
+    async function saveToGoogleSheets(submission) {
+        const scriptURL = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec';
+        const response = await fetch(scriptURL, {
+            method: 'POST',
+            body: JSON.stringify(submission)
+        });
+        return response.json();
+    }
+    
     showNotification(message, type = 'info') {
         // Create notification element
         const notification = document.createElement('div');
